@@ -2,7 +2,7 @@ A SVG recolouration demo, showing the power of vector graphics.
 
 What is it?
 ===========
-SVG is an XMl-based vector graphics language. This makes it easy for us
+SVG is an XML-based vector graphics language. This makes it easy for us
 to manipulate attributes such as individual colours and lines within the
 graphic.
 
@@ -13,6 +13,24 @@ day variations.
 
 ![The screenshot shows a number of colour variations and a night/day sample](screenshot.png)
 
+The Code
+========
+To illustrate my point, you can create a variation with the following
+code:
+
+	var svg = recolourAll({
+		svg : aStringContainingSVGSource,
+		primary : '#ff0000',
+		secondary : '#0000ff',
+		time : 13
+	});
+		
+This demo recolours one of the image templates to be a primarily red
+sprite with blue highlight colours as it would appear at 1 PM.
+
+You can then add the SVG to the DOM the following code, for instance:
+
+	$('body').append(svg);
 
 The future
 ==========
