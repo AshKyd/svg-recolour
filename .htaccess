@@ -1,0 +1,5 @@
+# Make sure to send the gzip encoding or the browser won't know what to
+# do with it.
+
+AddType image/svg+xml svg svgz
+AddEncoding gzip svgz
