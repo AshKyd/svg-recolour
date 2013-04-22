@@ -186,52 +186,59 @@ window.onload = function(){
 	$('form input,form select').change(submit);
 	
 	$.ajax({
-		url : 'diner.svgz',
+		url : '../img/diner.svgz',
 		dataType : 'html',
 		success : function(a){
 			templates['diner.svgz'] = a;
 		}
 	});
 	$.ajax({
-		url : 'industrial-housing.svgz',
+		url : '../img/industrial-housing.svgz',
 		dataType : 'html',
 		success : function(a){
 			templates['industrial-housing.svgz'] = a;
 		}
 	});
 	$.ajax({
-		url : 'shed.svgz',
+		url : '../img/shed.svgz',
 		dataType : 'html',
 		success : function(a){
 			templates['shed.svgz'] = a;
 		}
 	});
 	$.ajax({
-		url : 'mill-accomodation.svgz',
+		url : '../img/mill-accomodation.svgz',
 		dataType : 'html',
 		success : function(a){
 			templates['mill-accomodation.svgz'] = a;
 		}
 	});
 	$.ajax({
-		url : 'farnsworth-house.svgz',
+		url : '../img/farnsworth-house.svgz',
 		dataType : 'html',
 		success : function(a){
 			templates['farnsworth-house.svgz'] = a;
 		}
 	});
 	$.ajax({
-		url : 'pritchard-house.svgz',
+		url : '../img/pritchard-house.svgz',
 		dataType : 'html',
 		success : function(a){
 			templates['pritchard-house.svgz'] = a;
 		}
 	});
 	$.ajax({
-		url : 'market.svgz',
+		url : '../img/market.svgz',
 		dataType : 'html',
 		success : function(a){
 			templates['market.svgz'] = a;
+		}
+	});
+	$.ajax({
+		url : '../img/shopping-centre.svgz',
+		dataType : 'html',
+		success : function(a){
+			templates['shopping-centre.svgz'] = a;
 		}
 	});
 }
