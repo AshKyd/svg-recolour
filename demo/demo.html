@@ -42,38 +42,37 @@
 			
 			.render{
 				min-height:301px;
+				position:relative;
+			}
+			.flip{
+				transform:  rotateY( -180deg );
+			}
+			.render:before{
+				content:attr(data-status);
+				font-weight:bold;
+				position:absolute;
+				left:0;
+				top:0;
+				background:white;
+				font-size:100px;
+				color:black;
 			}
 		</style>
 	</head>
 	<body>
 		<form>
-			<label for="time">Hour (0-23)</label><input type="range" min="0" max="239900" id="time" value="12">
+			<label for="time">Hour (0-23)</label><input type="range" min="0" max="239900" id="time" value="12" step="5000">
 			<input type="color" value="#aaaaaa" id="col1">
 			<input type="color" value="#6BBBF5" id="col2">
 			<select id="template">
-				<option selected value="mill-accomodation.svgz">Mill Accomodation</option>
-				<option  value="diner.svgz">Diner</option>
-				<option value="shed.svgz">Shed</option>
-				<option value="market.svgz">market</option>
-				<option value="farnsworth-house.svgz">Farnsworth House</option>
-				<option value="industrial-housing.svgz">Industrial Housing</option>
-				<option value="pritchard-house.svgz">Pritchard Housing</option>
-				<option value="shopping-centre.svgz">Shopping Centre</option>
 			</select>
+			<label for="flipped">Flip</label><input type="checkbox" name="flipped" id="flipped">
 			<button type="submit">Render</button>
 		</form>
 		<div class="clock">
 			Base Template
 		</div>
 		<div class="render">
-			<img src="../img/market.svgz">
-			<img src="../img/diner.svgz">
-			<img src="../img/industrial-housing.svgz">
-			<img src="../img/shed.svgz">
-			<img src="../img/mill-accomodation.svgz">
-			<img src="../img/farnsworth-house.svgz">
-			<img src="../img/pritchard-house.svgz">
-			<img src="../img/shopping-centre.svgz">
 		</div>
 	</body>
 </html>
