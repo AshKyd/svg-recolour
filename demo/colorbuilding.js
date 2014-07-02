@@ -283,4 +283,6 @@ window.onload = function() {
     ].forEach(function(item) {
         $('#template').append($('<option>').text(item));
     });
+
+    submit();
 }
