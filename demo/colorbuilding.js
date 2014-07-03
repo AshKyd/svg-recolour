@@ -4,22 +4,26 @@ var replacements = {
     primary: [
         '#6600cc', // dark
         '#ff00ff', // medium
-        '#ff9bff'  // light
+        '#ff9bff', // light
+        '#ffdeff', // lightest
     ],
     secondary: [
         '#f44800',
         '#fb8b00',
-        '#f0a513'
+        '#f0a513',
+        '#f7d083',
     ],
     primaryAlt: [
         '#ff00ff',
         '#6600cc',
-        '#ff9bff'
+        '#ffdeff',
+        '#ff9bff',
     ],
     secondaryAlt: [
         '#fb8b00',
         '#f44800',
-        '#f0a513'
+        '#f7d083',
+        '#f0a513',
     ],
 };
 
@@ -49,16 +53,18 @@ var neonColors = {
             fill: [
                 baseColor.darkenByRatio(.2).toCSS(),
                 baseColor.toCSS(),
-                baseColor.lightenByRatio(.2).toCSS()
+                baseColor.lightenByRatio(.1).toCSS(),
+                baseColor.lightenByRatio(.2).toCSS(),
             ],
             stroke: [
                 baseColor.darkenByRatio(.3).toCSS(),
                 baseColor.darkenByRatio(.1).toCSS(),
-                baseColor.lightenByRatio(.3).toCSS()
+                baseColor.lightenByRatio(.2).toCSS(),
+                baseColor.lightenByRatio(.3).toCSS(),
             ]
         }
 
-        for (var i = 0; i <= 2; i++) {
+        for (var i = 0; i < replacements[type].length; i++) {
             svg = makeReplacement(svg, 'fill', replacements[type][i], fills.fill[i]);
             svg = makeReplacement(svg, 'stop-color', replacements[type][i], fills.fill[i]);
             svg = makeReplacement(svg, 'stroke', replacements[type][i], fills.stroke[i]);
