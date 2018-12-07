@@ -1,0 +1,22 @@
+{
+  "name": "svg-recolour",
+  "version": "1.0.0",
+  "description": "Recolorization for game assets based on color maps",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node --experimental-modules node_modules/mocha/bin/_mocha test/**"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AshKyd/svg-recolour.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AshKyd/svg-recolour/issues"
+  },
+  "homepage": "https://github.com/AshKyd/svg-recolour#readme",
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  }
+}
